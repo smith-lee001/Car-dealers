@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Selling Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('') center/cover no-repeat;
+            color: #fff;
+        }
+
+        header {
+            background: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .car-listing {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .car-card {
+            background: #555;
+            padding: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        footer {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Car Dealership</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Cars for Sale</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Featured Cars</h2>
+
+        <div class="car-listing">
+            <!-- Car Card Example -->
+            <div class="car-card">
+                <img src="My Image/audi-1076316_1280.jpg" alt="Car 1">
+                <h3>Car Model 1</h3>
+                <p>Year: 2023 | Mileage: 10,000 miles</p>
+                <p>Price: $30,000</p>
+                <a href="#">View Details</a>
+            </div>
+
+            <!-- Repeat similar blocks for other cars -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Car Dealership. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

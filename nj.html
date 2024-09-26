@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Float Layout</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    overflow: hidden; /* Clearfix to contain floated columns */
+}
+
+.column {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.column:first-child {
+    border-right: 5px solid #ccc; 
+    height: 100px;
+}
+
+
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: none;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    border-style: none;
+    height: 10px;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    
+    <div class="container">
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>Content for column 1 goes here.</p>
+        </div>
+
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>Content for column 2 goes here.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Footer content goes here.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,162 @@
+ <!DOCTYPE html>                                                                             <!DOCTYPE html>
+<html>
+
+<head>
+  <title> Reservation </title>
+  <link rel="stylesheet" href="style.css">
+	<style>
+		/* body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		} */
+
+		form h2{
+		color:#fff;
+		}
+		
+		label {
+		color: #333;
+		}
+
+		/* #form {
+		background-color: #e7e7e7;
+		border-radius:10px;
+        text-align: center;
+        padding: 20px;
+		} */
+		form{
+		/* background-color: #e7e7e7; */
+        border-radius:10px;
+        text-align: center;
+        padding: 20px;
+		height: 100vh;
+    }
+		input{
+		margin-bottom: 25px;
+		border-radius: 10px;
+		border: 10px;
+		padding: 5px;
+		}
+
+		input[type=reset]{
+		background-color: #ffa500;
+		cursor: pointer;
+		border-radius: 3px;
+		padding: 7px;
+		}
+
+		input[type=submit]{
+		background-color: #ffa500;
+		border-radius: 3px;
+		cursor: pointer;
+		padding: 7px;
+		}
+		footer {
+          background-color: brown;
+          padding: 20px;
+          text-align: center;
+           color: blue;
+         position: fixed;
+         width: 100%;
+    bottom: 0px;
+    border-style: none;
+    height: 50px;
+}
+                
+	</style>
+</head>
+
+<body>
+	<header><h1>THIS IS MY BANNER TEXT</h1></header>
+    <ul class="links">
+    <a href="HOME.html">HOME</a> 
+    <a href="IFRAME.html">IFRAME</a>
+    <a href="pop.html">POP UP</a>
+    <a href="exe2.html">RESERVATION</a>
+	</ul>
+	<form id="form" >
+		<h2> Reservation </h2>
+
+		<label for = "name"> Name: </label> 
+		<input type = "text" id = "name" placeholder = "Your Name"> <br>
+
+		<label for = "age"> Age: </label> 
+		<input type = "age" id = "age" placeholder = "Your Age"> <br>
+
+		<label> Gender: </label> 
+		<label for = "male"> Male: </label>
+		<input type = "radio" id = "male" name = "gender" value = "male"> 
+		<label for = "female"> Female: </label>
+		<input type = "radio" id = "female" name = "gender" value = "female"> <br> 
+
+		<label for = "phoneNumber"> Phone Number: </label> 
+		<input type = "phoneNumber" id = "phoneNumber" placeholder = "Your Phone Number"><br>
+
+		<label for = "email"> Email: </label> 
+		<input type = "email" id = "email" placeholder = "Your Email"> <br>
+		
+
+		<input id = "submitBtn" onclick="validateform()" type = "submit" value = "Submit">
+		<input id = "resetBtn" type = "reset" value = "Reset">
+
+	</form>
+	<footer>
+		&copy; Lee Smith Mwangi
+	</footer>
+
+
+	<script>
+	const submitBtn = document.getElementById("submitBtn");
+	const resetBtn = document.getElementById("resetBtn");
+
+
+// Function validation end 
+
+function validateform() {
+	const name= document.getElementById("name").value;
+	const age= document.getElementById("age").value;
+	const phoneNumber= document.getElementById("phoneNumber").value;
+	const email= document.getElementById("email").value;
+
+	var phoneRegex =/^[0-9]{10}$/;
+
+	var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+
+
+	if (name === "" || age === "" || phoneNumber === "" || email === ""){ 
+alert("fill in all the fields");
+return false;
+} 
+
+
+	
+
+
+
+	 if (!phoneNumber.match(phoneRegex)){ 
+alert("please enter a valid 10 digit phone number");
+console.log(phone);
+return false;
+} 
+
+
+	 if (!email.match(emailRegex)){ 
+alert("please enter a valid email address");
+return false;
+} 
+
+
+	
+
+alert("Reserved");
+return true;
+}
+// Function validation end 
+
+	</script>
+</body>
+</html>
